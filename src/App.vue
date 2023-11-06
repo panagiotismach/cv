@@ -3,28 +3,16 @@
     <div id="name-site">
       <h3 class="nav-item">Panagiotis Machairas</h3>
     </div>
+
     <div id="nav">
-      <div class="nav-item">Home</div>
-      <div class="nav-item">Bio</div>
-      <div class="nav-item">Contact</div>
+      <router-link class="nav-item" :to="{ path: '/home' }">Home</router-link>
+      <router-link class="nav-item" :to="{ path: '/bio' }">Bio</router-link>
+
+      <div class="nav-item" :to="{ path: '/contact' }">Contact</div>
     </div>
   </nav>
 
-  <base-container>
-    <div class="column"><img src="../src/assets/me.jpeg" /></div>
-    <div class="column">
-      <h2>Panagiotis Machairas</h2>
-      <p>Software Engineer | Master Software Development and Cloud</p>
-      <p>Passionate about Computer Science</p>
-
-      <button>Download CV</button>
-      <br />
-      <div id="icon">
-        <font-awesome-icon :icon="['fab', 'linkedin']" />
-        <font-awesome-icon :icon="['fab', 'github']" />
-      </div>
-    </div>
-  </base-container>
+  <router-view></router-view>
 
   <vue-particles
     id="tsparticles"
@@ -98,17 +86,15 @@
 
 <script>
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
-import BaseContainer from "./components/basics/BaseContainer.vue";
 
 export default {
   name: "App",
-  components: {
-    BaseContainer,
-  },
+
   methods: {
     async particlesInit(engine) {
       await loadSlim(engine);
     },
+
     particlesLoaded(container) {
       console.log("Particles container loaded", container);
     },
@@ -117,22 +103,6 @@ export default {
 </script>
 
 <style>
-#container {
-  display: flex;
-  justify-content: space-around;
-  margin-left: auto;
-  margin-right: auto;
-  columns: 2;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px 2px rgba(166, 169, 176, 0.8);
-  width: 60%;
-  margin-top: 20px;
-
-  z-index: 1;
-  position: relative;
-}
-
 #name-site {
   display: block;
   width: 40%;
@@ -156,6 +126,11 @@ nav {
 
 .nav-item:hover {
   color: #1484c9;
+}
+
+.nav-item {
+  color: black;
+  text-decoration: none;
 }
 
 #nav {
