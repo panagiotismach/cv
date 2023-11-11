@@ -1,5 +1,5 @@
 <template>
-  <base-container>
+  <base-container mode="layoutflex">
     <div class="column"><img src="../../assets/me.jpeg" /></div>
     <div class="column">
       <h2>Panagiotis Machairas</h2>
@@ -9,11 +9,14 @@
       </div>
 
       <div class="button-icon">
-        <button>Download CV</button>
+        <a href="/MACHAIRAS_PANAGIOTIS.pdf" download>
+          <base-button content="Download CV"></base-button>
+        </a>
+
         <br />
         <div id="icon">
-          <font-awesome-icon class="i" :icon="['fab', 'linkedin']" size="xl" />
-          <font-awesome-icon class="i" :icon="['fab', 'github']" size="xl" />
+          <a href="https://www.linkedin.com/in/panagiotis-machairas-9263841b9/" target="_blank"><font-awesome-icon class="i" :icon="['fab', 'linkedin']" size="xl" /></a>
+          <a href="https://github.com/ics20044" target="_blank"><font-awesome-icon class="i" :icon="['fab', 'github']" size="xl" /></a>
         </div>
       </div>
     </div>
@@ -21,9 +24,8 @@
 </template>
 
 <style scoped>
-.column {
-  width: 50%;
-  margin: 40px;
+img {
+  width: 100%;
 }
 
 .button-icon {
@@ -34,9 +36,33 @@
   margin-top: 35px;
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 #icon {
   display: flex;
   justify-content: space-evenly;
   margin-top: 35px;
+}
+
+@media (max-width: 1100px) {
+  .column {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  img {
+    margin-top: 10px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  #icon {
+    padding-bottom: 20px;
+  }
 }
 </style>

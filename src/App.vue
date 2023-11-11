@@ -8,7 +8,7 @@
       <router-link class="nav-item" :to="{ path: '/home' }">Home</router-link>
       <router-link class="nav-item" :to="{ path: '/bio' }">Bio</router-link>
 
-      <div class="nav-item" :to="{ path: '/contact' }">Contact</div>
+      <router-link class="nav-item" :to="{ path: '/contact' }">Contact</router-link>
     </div>
   </nav>
 
@@ -21,7 +21,7 @@
     :options="{
       background: {
         color: {
-          value: '#fcfafa',
+          value: '#ffffff',
         },
       },
       fpsLimit: 120,
@@ -44,10 +44,10 @@
       },
       particles: {
         color: {
-          value: '#b6b7b8',
+          value: '#bfbfb5',
         },
         links: {
-          color: '#b6b7b8',
+          color: '#bfbfb5',
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -58,7 +58,7 @@
           enable: true,
           outMode: 'bounce',
           random: false,
-          speed: 2,
+          speed: 1,
           straight: false,
         },
         number: {
@@ -135,23 +135,13 @@ nav {
 
 #nav {
   display: flex;
+  margin: auto;
   justify-content: space-around;
   width: 60%;
 }
 
 img {
   width: 80%;
-}
-
-button {
-  background-color: #1484c9;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px 2px rgba(166, 169, 176, 0.8);
-  width: 60%;
-  margin-top: 10px;
-  padding: 10px;
 }
 
 .column {

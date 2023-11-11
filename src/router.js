@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import HomePage from "../src/components/pages/HomePage.vue";
 import BioPage from "./components/pages/BioPage.vue";
+import ContactPage from "./components/pages/ContactPage.vue";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -20,7 +21,7 @@ const router = createRouter({
     },
     {
       path: "/contact",
-      component: BioPage,
+      component: ContactPage,
     },
     {
       path: "/*",
