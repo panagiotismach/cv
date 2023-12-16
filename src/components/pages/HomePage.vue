@@ -10,7 +10,7 @@
 
       <div class="button-icon">
         <a href="/MACHAIRAS_PANAGIOTIS.pdf" download>
-          <base-button content="Download CV"></base-button>
+          <base-button @click="t" content="Download CV"></base-button>
         </a>
 
         <br />
@@ -22,6 +22,14 @@
     </div>
   </base-container>
 </template>
+
+<script>
+export default {
+  methods: {
+    t() {},
+  },
+};
+</script>
 
 <style scoped>
 img {
