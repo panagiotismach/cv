@@ -4,15 +4,19 @@
       <h3 class="nav-item">Panagiotis Machairas</h3>
     </div>
 
-    <div id="nav">
-      <router-link class="nav-item" :to="{ path: '/home' }">Home</router-link>
-      <router-link class="nav-item" :to="{ path: '/bio' }">Bio</router-link>
+    <font-awesome-icon id="bar" @click="menu" :icon="['fas', 'bars']" size="xl" />
 
-      <router-link class="nav-item" :to="{ path: '/contact' }">Contact</router-link>
+    <div id="nav" :class="{ visible: visible }">
+      <router-link class="nav-item" @click="menu" :to="{ path: '/home' }">Home</router-link>
+      <router-link class="nav-item" @click="menu" :to="{ path: '/bio' }">Bio</router-link>
+
+      <router-link class="nav-item" @click="menu" :to="{ path: '/contact' }">Contact</router-link>
     </div>
   </nav>
 
-  <router-view></router-view>
+  <div id="view" :class="{ show: visible }">
+    <router-view></router-view>
+  </div>
 
   <vue-particles
     id="tsparticles"
@@ -90,6 +94,12 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
 export default {
   name: "App",
 
+  data() {
+    return {
+      visible: false,
+    };
+  },
+
   methods: {
     async particlesInit(engine) {
       await loadSlim(engine);
@@ -97,6 +107,10 @@ export default {
 
     particlesLoaded(container) {
       console.log("Particles container loaded", container);
+    },
+
+    menu() {
+      this.visible = !this.visible;
     },
   },
 };
@@ -128,6 +142,10 @@ nav {
   color: #1484c9;
 }
 
+#bar {
+  display: none;
+}
+
 .nav-item {
   color: black;
   text-decoration: none;
@@ -138,6 +156,46 @@ nav {
   margin: auto;
   justify-content: space-around;
   width: 60%;
+}
+
+@media (max-width: 400px) {
+  #bar {
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+
+  .visible {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 190px;
+    bottom: 0;
+    margin: auto;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .nav-item {
+    font-size: large;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 200px) {
+  nav {
+    display: block;
+  }
 }
 
 img {

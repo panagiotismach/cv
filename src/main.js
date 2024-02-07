@@ -13,13 +13,14 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import { faEnvelope, faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faBriefcase, faGraduationCap, faBars } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faLinkedin);
 library.add(faGithub);
 library.add(faEnvelope);
 library.add(faBriefcase);
 library.add(faGraduationCap);
+library.add(faBars);
 
 const app = createApp(App);
 
