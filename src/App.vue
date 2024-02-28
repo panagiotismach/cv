@@ -158,7 +158,17 @@ nav {
   width: 60%;
 }
 
+@media (max-width: 600px) {
+  nav {
+    margin-top: -10px;
+  }
+}
+
 @media (max-width: 400px) {
+  nav {
+    margin-top: -50px;
+  }
+
   #bar {
     display: block;
     margin-top: auto;
