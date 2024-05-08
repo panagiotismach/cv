@@ -3,9 +3,9 @@
     <div class="column">
       <base-header content="Contact"></base-header>
       <contact-container image="envelope" url="mailto:panagiotis.machairas16@gmail.com" type="fas" title="Gmail"></contact-container>
-      <contact-container image="linkedin" url="https://www.linkedin.com/in/panagiotis-machairas-9263841b9/" type="fab" title="Linkedin"></contact-container>
+      <contact-container image="linkedin" url="https://www.linkedin.com/in/panagiotism/" type="fab" title="Linkedin"></contact-container>
       <div id="one">
-        <contact-container image="github" url="https://github.com/ics20044" type="fab" title="Github"></contact-container>
+        <contact-container image="github" url="https://github.com/panagiotismach" type="fab" title="Github"></contact-container>
       </div>
     </div>
   </base-container>

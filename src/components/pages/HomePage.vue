@@ -15,8 +15,8 @@
 
         <br />
         <div id="icon">
-          <a href="https://www.linkedin.com/in/panagiotis-machairas-9263841b9/" target="_blank"><font-awesome-icon class="i" :icon="['fab', 'linkedin']" size="xl" /></a>
-          <a href="https://github.com/ics20044" target="_blank"><font-awesome-icon class="i" :icon="['fab', 'github']" size="xl" /></a>
+          <a href="https://www.linkedin.com/in/panagiotism/" target="_blank"><font-awesome-icon class="i" :icon="['fab', 'linkedin']" size="xl" /></a>
+          <a href="https://github.com/panagiotismach" target="_blank"><font-awesome-icon class="i" :icon="['fab', 'github']" size="xl" /></a>
         </div>
       </div>
     </div>
