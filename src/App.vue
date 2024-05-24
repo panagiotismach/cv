@@ -4,13 +4,13 @@
       <h3 class="nav-item">Panagiotis Machairas</h3>
     </div>
 
-    <font-awesome-icon id="bar" @click="menu" :icon="['fas', 'bars']" size="xl" />
+    <font-awesome-icon id="bar" @click="menu($event)" :icon="['fas', 'bars']" size="xl" />
 
     <div id="nav" :class="{ visible: visible }">
-      <router-link class="nav-item" @click="menu" :to="{ path: '/home' }">Home</router-link>
-      <router-link class="nav-item" @click="menu" :to="{ path: '/bio' }">Bio</router-link>
+      <router-link class="nav-item" @click="menu($event)" :to="{ path: '/home' }">Home</router-link>
+      <router-link class="nav-item" @click="menu($event)" :to="{ path: '/bio' }">Bio</router-link>
 
-      <router-link class="nav-item" @click="menu" :to="{ path: '/contact' }">Contact</router-link>
+      <router-link class="nav-item" @click="menu($event)" :to="{ path: '/contact' }">Contact</router-link>
     </div>
   </nav>
 
@@ -97,6 +97,7 @@ export default {
   data() {
     return {
       visible: false,
+      mediaQuery: true,
     };
   },
 
@@ -109,9 +110,17 @@ export default {
       console.log("Particles container loaded", container);
     },
 
-    menu() {
-      this.visible = !this.visible;
+    menu(e) {
+      if (window.innerWidth <= 500 && e.type == "click") {
+        this.visible = !this.visible;
+      } else {
+        this.visible = false;
+      }
     },
+  },
+  mounted() {
+    this.mediaQuery = window.matchMedia("(min-width: 501px)");
+    this.mediaQuery.addEventListener("change", this.menu);
   },
 };
 </script>
