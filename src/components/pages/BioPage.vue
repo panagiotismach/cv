@@ -2,10 +2,11 @@
   <base-container mode="layoutblock">
     <base-header content="About"></base-header>
     <p id="description">
-      Hello, everyone. My name is Panagiotis Macharas and I have graduated from the department of Applied Informatics, at University of Macedonia. With the engagement in the computer science I have
-      understood that i am passionate about software engineering and especially with the quality of code. Some examples of the technologies that i am skilled are JavaScript, Node.js, Vue.js, HTML5,
-      mongoDB, php, python. Throughout my studies, my team and i have developed a deep variety of applications on mobile, desktop and web. We are interested in to create innovative solutions that
-      solve complex problems, improve efficiency, and enhance user experiences.
+      Hello, everyone. My name is Panagiotis Machairas and I am doing my master in Software Development and Cloud at University of Macedonia. I also have graduated from the department of Applied
+      informatics, Computer Science and Technology at the University of Macedonia. With my experience with computer science I understood that I am passionate about software engineering and especially
+      with the quality of code and software architecture. Some examples of the technologies that I am skilled are JavaScript, Java, Node.js, Vue.js, mongoDB, php, python. Throughout my studies, my
+      team and I have developed a deep variety of applications on mobile, desktop and web. We are interested in to create innovative solutions that solve complex problems, improve efficiency, and
+      enhance user experiences.
     </p>
     <a href="/MACHAIRAS_PANAGIOTIS.pdf" download>
       <base-button mode="big" content="Download CV"></base-button>
