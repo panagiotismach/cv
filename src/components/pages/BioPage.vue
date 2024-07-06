@@ -13,6 +13,7 @@
     </a>
     <div class="bio">
       <bio-section image="briefcase" title="Experience">
+        <bio-content contenth="Software Engineer at Netcompany-Intrasoft" contentp="Jun 2024 - Present"></bio-content>
         <bio-content contenth="Software Solution Engineer at pfizer" contentp="Jul 2023 - Dec 2023"></bio-content>
         <bio-content contenth="Website Developer, Freelance" contentp="Jun 2021 - Sep 2021"></bio-content>
       </bio-section>
